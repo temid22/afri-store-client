@@ -1,0 +1,85 @@
+.newUser{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(233, 228, 237, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+        center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .newUserContainer{
+    width: 400px;
+    padding: 20px;
+    margin-bottom: 100px;
+  }
+
+.addNewUserTitle {
+font-size: 30px;
+  font-weight: 900;
+  color: teal;
+  margin-bottom: 10px;
+  display :flex;
+  justify-content: center;
+  margin-right: 20px;
+  }
+  
+  .addNewUserForm {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .addNewUserItem {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  .addNewUserItem > label {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(151, 150, 150);
+  }
+  
+  .addNewUserItem > input {
+    height: 20px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid maroon;
+    border-radius: 50px;
+    outline: none;
+    box-shadow: -3px 4px 4px 5px rgba(207,245,238,0.27);
+-webkit-box-shadow: -3px 4px 4px 5px rgba(207,245,238,0.27);
+-moz-box-shadow: -3px 4px 4px 5px rgba(207,245,238,0.27);
+  }
+  
+  .addNewUserButton {
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color:maroon;
+    color: #999;
+    padding: 7px 10px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+  
+  .addNewUserButton:hover{
+    background-color: maroon;
+    color: #fff;
+    transition: 0.5s ease;
+  }
