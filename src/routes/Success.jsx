@@ -12,12 +12,10 @@ const Success = () => {
   const [orderId, setOrderId] = useState(null);
   const [address, setAddress] = useState("");
   const [fullName, setFullName] = useState("");
-  const [destination, setDestination] = useState("");
   const navigate = useNavigate();
 
   const handleDestination = async (e) => {
     e.preventDefault();
-    setDestination(address);
     try {
       const res = await userRequest.post("order", {
         id: currentUser?._id,
@@ -26,7 +24,7 @@ const Success = () => {
           quantity: quantity,
         })),
         amount: cart.total,
-        address: destination,
+        address: address,
       });
       resetCart();
       setOrderId(res.data._id);
@@ -43,9 +41,12 @@ const Success = () => {
   return (
     <div className="success">
       <div>
-        <h1 className="successTitle">Make An Order</h1>
+        <h1 className="successTitle">Complete Your Order</h1>
         <form className="successForm">
           <div className="successItem">
+            <div className="successItem">
+              {orderId && "Success! Please take a screenshot within 10seconds"}
+            </div>
             <label>Full Name</label>
             <input
               type="text"

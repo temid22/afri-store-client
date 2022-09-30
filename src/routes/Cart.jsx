@@ -27,6 +27,7 @@ const Title = styled.h1`
   color: maroon;
   font-size 20px;
   text-align: center;
+  ${mobile({ fontSize: 12 })}
 `;
 
 const Top = styled.div`
@@ -51,6 +52,7 @@ const TopButton = styled.button`
     background-color: green;
     transition: 0.5s ease;
   }
+  ${mobile({ fontSize: 8, fontWeight: 300 })}
 `;
 
 const TopTexts = styled.div`
@@ -73,6 +75,7 @@ const Bottom = styled.div`
 
 const Info = styled.div`
   flex: 3;
+  ${mobile({ fontSize: 12 })}
 `;
 
 const Product = styled.div`
@@ -92,6 +95,7 @@ const Image = styled.img`
   width: 100px;
   border: none;
   border-radius: 50px;
+  ${mobile({ height: "70px", width: "70px" })}
 `;
 
 const Details = styled.div`
@@ -101,16 +105,19 @@ const Details = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  ${mobile({ fontSize: 12 })}
 `;
 
 const ProductName = styled.span`
   font-size: 14px;
   margin: 2px;
+  ${mobile({ fontSize: 12 })}
 `;
 
 const ProductId = styled.span`
   font-size: 12px;
   margin: 2px;
+  ${mobile({ fontSize: 10 })}
 `;
 
 const ProductColor = styled.div`
@@ -123,6 +130,7 @@ const ProductColor = styled.div`
 
 const ProductSize = styled.span`
   font-size: 12px;
+  ${mobile({ fontSize: 10 })}
 `;
 
 const PriceDetail = styled.div`
@@ -142,19 +150,19 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
   font-size: 20px;
   margin: 5px;
-  ${mobile({ margin: "5px 15px" })}
+  ${mobile({ margin: "5px 15px", fontSize: 12 })}
 `;
 
 const ProductPrice = styled.div`
-  font-size: 18px;
-  font-weight: 200;
-  ${mobile({ marginBottom: "20px" })}
+  font-size: 14px;
+  font-weight: 600;
+  ${mobile({ marginBottom: "20px", fontSize: 10 })}
 `;
 
 const Hr = styled.hr`
   background-color: #eee;
   border: none;
-  height: 2px;
+  height: 3px;
 `;
 
 const Summary = styled.div`
@@ -163,6 +171,7 @@ const Summary = styled.div`
   border-radius: 10px;
   padding: 20px;
   height: 50vh;
+  background-color: #eee;
 `;
 
 const SummaryTitle = styled.h1`
@@ -176,11 +185,13 @@ const SummaryItem = styled.div`
   justify-content: space-between;
   font-weight: ${(props) => props.type === "total" && "600"};
   font-size: ${(props) => props.type === "total" && "20px"};
+  ${mobile({ fontSize: 12 })}
 `;
 
 const SummaryItemText = styled.span`
   color: black;
   font-size: 13px;
+  ${mobile({ fontSize: 10 })}
 `;
 
 const SummaryItemPrice = styled.span`
@@ -256,8 +267,7 @@ const Cart = () => {
             }}
             onClick={handleAddMore}
           >
-            <BsArrowLeftCircle />
-            Add More
+            <BsArrowLeftCircle style={{ Color: "gray" }} />
           </TopButton>
           <TopTexts>
             <TopText>Bag({cartQuantity})</TopText>

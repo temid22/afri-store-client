@@ -1,4 +1,3 @@
-import axios from "axios";
 import styled from "styled-components";
 import Product from "./Product";
 import { useState, useEffect } from "react";

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 20px;
@@ -13,6 +14,7 @@ const Container = styled.div`
   @media (min-width: 700px) {
     height: 20px;
   }
+  ${mobile({ fontSize: 12, fontWeight: 300 })}
 `;
 // #e3e2df
 

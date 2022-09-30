@@ -5,6 +5,7 @@ import {
   AiOutlineHeart,
 } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
+import { mobile } from "../responsive";
 
 const Info = styled.div`
   opacity: 0;
@@ -20,6 +21,7 @@ const Info = styled.div`
   justify-content: center;
   transition: all 0.5s ease;
   cursor: pointer;
+  border-radius: 10px;
 `;
 
 const Container = styled.div`
@@ -35,6 +37,7 @@ const Container = styled.div`
   &:hover ${Info} {
     opacity: 1;
   }
+  border-radius: 10px;
 `;
 
 const Circle = styled.div`
@@ -48,12 +51,14 @@ const Circle = styled.div`
 const Image = styled.img`
   height: 75%;
   z-index: 2;
+  border-radius: 10px;
+  width: 250px;
 `;
 
 const Icon = styled.div`
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 40%;
   background-color: white;
   display: flex;
   align-items: center;
@@ -64,6 +69,7 @@ const Icon = styled.div`
     background-color: #e9f5f5;
     transform: scale(1.1);
   }
+  ${mobile({ width: "25px", height: "25px" })}
 `;
 
 const Product = ({ item }) => {

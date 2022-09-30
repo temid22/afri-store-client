@@ -10,12 +10,13 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  ${mobile({ height: "30vh" })}
 `;
 const Title = styled.h1`
   font-size: 50px;
   margin-bottom: 20px;
   color: maroon;
-  ${mobile({ fontSize: 35 })};
+  ${mobile({ fontSize: 25 })};
 `;
 
 const Desc = styled.div`
@@ -23,7 +24,7 @@ const Desc = styled.div`
   font-weight: 300;
   margin-bottom: 20px;
   font-style: italic;
-  ${mobile({ textAlign: "center", fontSize: 16 })}
+  ${mobile({ textAlign: "center", fontSize: 12 })}
 `;
 
 const InputContainer = styled.div`

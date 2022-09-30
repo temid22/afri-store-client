@@ -29,7 +29,8 @@ const Image = styled.img`
   width: 350px;
   height: 40vh;
   object-fit: cover;
-  ${mobile({ height: "40vh" })}
+  border-raduis: 10px;
+  ${mobile({ height: "30vh", width: "390px", borderRadius: "10px" })};
 `;
 
 const InfoContainer = styled.div`
@@ -41,16 +42,19 @@ const InfoContainer = styled.div`
 const Title = styled.h1`
   font-weight: 400;
   color: #9a1750;
+  ${mobile({ fontWeight: 400, fontSize: "20px" })}
 `;
 
 const Desc = styled.p`
   margin: 20px 0px;
   font-size: 16px;
+  ${mobile({ fontWeight: 200, fontSize: "12px" })}
 `;
 
 const Price = styled.span`
   font-weight: 600;
   font-size: 20px;
+  ${mobile({ fontWeight: 400, fontSize: "14px" })}
 `;
 
 const FilterContainer = styled.div`
@@ -70,6 +74,7 @@ const FilterTitle = styled.span`
   font-size: 20px;
   font-weight: 600;
   color: #9a1750;
+  ${mobile({ fontWeight: 400, fontSize: "14px" })}
 `;
 
 const FilterColor = styled.div`
@@ -126,11 +131,12 @@ const Button = styled.button`
   border: none;
   background-color: #e3afbc;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
   &:hover {
     background-color: maroon;
     color: white;
   }
+  ${mobile({ fontWeight: 400, fontSize: "10px" })}
 `;
 
 const Product = ({ type }) => {

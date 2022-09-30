@@ -5,13 +5,15 @@ import { mobile } from "../responsive";
 const Container = styled.div`
   flex: 1;
   margin: 3px;
-  height: 70vh;
+  height: 100vh;
   position: relative;
+  background-color: pink;
 `;
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
   ${mobile({ height: "20vh" })};
 `;
 const Info = styled.div`

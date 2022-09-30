@@ -14,6 +14,7 @@ const Title = styled.h1`
   margin: 20px;
   color: maroon;
   font-size: 16px;
+  ${mobile({ fontSize: 12 })}
 `;
 
 const FilterContainer = styled.div`
@@ -23,7 +24,7 @@ const FilterContainer = styled.div`
 
 const Filter = styled.div`
   margin: 20px;
-  ${mobile({ width: "0px 20px", display: "flex", flexDirection: "column" })}
+  ${mobile({ width: "0px 15px", display: "flex", flexDirection: "column" })}
 `;
 
 const FilterText = styled.span`
@@ -31,7 +32,7 @@ const FilterText = styled.span`
   font-weight: 600;
   margin-right: 20px;
   color: gray;
-  ${mobile({ marginRight: "0px" })}
+  ${mobile({ marginRight: "0px", fontSize: 10 })}
 `;
 
 const Select = styled.select`
