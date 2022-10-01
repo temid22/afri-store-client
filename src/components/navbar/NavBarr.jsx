@@ -79,10 +79,12 @@ function Navbarr() {
             />
           </Link>
           <CartQuantity>{cartQuantity}</CartQuantity>
-          <MdOutlineCancel
-            onClick={handleClearCart}
-            style={{ color: "orange", marginLeft: "10px" }}
-          />
+          {cartQuantity !== 0 && (
+            <MdOutlineCancel
+              onClick={handleClearCart}
+              style={{ color: "orange", marginLeft: "10px" }}
+            />
+          )}
         </RightContainer>
       </NavbarInnerContainer>
       {extendNavbar && (
