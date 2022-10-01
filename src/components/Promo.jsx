@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 
 const Container = styled.div`
   height: 20px;
@@ -11,10 +11,8 @@ const Container = styled.div`
   font-style: italic;
   font-size: 14px;
   font-weight: 600;
-  @media (min-width: 700px) {
-    height: 20px;
-  }
   ${mobile({ fontSize: 12, fontWeight: 300 })}
+  ${tablet({ fontSize: 12, fontWeight: 300 })};
 `;
 // #e3e2df
 

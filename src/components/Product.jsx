@@ -5,7 +5,7 @@ import {
   AiOutlineHeart,
 } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 
 const Info = styled.div`
   opacity: 0;

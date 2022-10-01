@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 import {
   TiSocialFacebook,
   TiSocialInstagram,
@@ -55,6 +55,7 @@ const SocialIcon = styled.div`
   justify-content: center;
   margin-right: 20px;
   ${mobile({ fontSize: 12, width: "20px", height: "20px" })}
+  ${tablet({ fontSize: 12, width: "20px", height: "20px" })}
 `;
 
 const Center = styled.div`
@@ -62,6 +63,7 @@ const Center = styled.div`
   flex-wrap: wrap;
   padding: 20px;
   ${mobile({ display: "none" })}
+  ${tablet({ display: "none" })}
 `;
 
 const Title = styled.h3`
