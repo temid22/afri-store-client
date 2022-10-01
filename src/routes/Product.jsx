@@ -32,7 +32,7 @@ const Image = styled.img`
   object-fit: cover;
   border-raduis: 10px;
   ${mobile({ height: "30vh", width: "390px", borderRadius: "10px" })};
-  ${tablet({ height: "30vh", width: "390px", borderRadius: "10px" })};
+  ${tablet({ height: "30vh", width: "470px", borderRadius: "10px" })};
 `;
 
 const InfoContainer = styled.div`

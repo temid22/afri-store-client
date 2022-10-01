@@ -9,6 +9,7 @@ const Container = styled.div`
   position: relative;
   background-color: pink;
   ${tablet({ height: "30vh" })};
+  ${mobile({ height: "30vh" })};
 `;
 const Image = styled.img`
   width: 100%;
@@ -29,11 +30,13 @@ const Info = styled.div`
   align-items: center;
   justify-content: center;
   ${tablet({ fontSize: 10 })};
+  ${mobile({ fontSize: 10 })};
 `;
 const Title = styled.h1`
   color: white;
   margin-bottom: 20px;
   ${mobile({ fontSize: 20 })};
+  ${tablet({ fontSize: 20 })};
 `;
 
 const Button = styled.button`
