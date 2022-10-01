@@ -37,6 +37,8 @@ const Top = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 25px;
+  ${mobile({ fontSize: 8, fontWeight: 300 })}
+  ${tablet({ fontSize: 8, fontWeight: 300 })}
 `;
 
 const TopButton = styled.button`
@@ -54,14 +56,9 @@ const TopButton = styled.button`
     background-color: green;
     transition: 0.5s ease;
   }
-  ${mobile({ fontSize: 8, fontWeight: 300 })}
-  ${tablet({ fontSize: 8, fontWeight: 300 })}
 `;
 
-const TopTexts = styled.div`
-  ${mobile({ display: "none" })}
-  ${tablet({ display: "none" })}
-`;
+const TopTexts = styled.div``;
 const TopText = styled.div`
   text-decoration: none;
   cursor: pointer;
@@ -69,8 +66,8 @@ const TopText = styled.div`
   :hover {
     color: maroon;
   }
-  ${mobile({ fontSize: 10, fontWeight: 300 })}
-  ${tablet({ fontSize: 10, fontWeight: 300 })}
+  ${mobile({ display: "none" })}
+  ${tablet({ display: "none" })}
 `;
 
 const Bottom = styled.div`
@@ -88,6 +85,7 @@ const Info = styled.div`
 
 const Product = styled.div`
   display: flex;
+
   justify-content: space-between;
   ${mobile({ flexDirection: "column" })}
   ${tablet({ flexDirection: "column" })}
@@ -138,6 +136,8 @@ const ProductColor = styled.div`
   height: 15px;
   border-radius: 50%;
   background-color: ${(props) => props.color};
+  ${mobile({ fontSize: 10 })}
+  ${tablet({ fontSize: 10 })}
 `;
 
 const ProductSize = styled.span`
@@ -152,6 +152,8 @@ const PriceDetail = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  ${mobile({ fontSize: 12 })}
+  ${tablet({ fontSize: 12 })}
 `;
 
 const ProductAmountContainer = styled.div`
@@ -168,8 +170,8 @@ const ProductAmount = styled.div`
 `;
 
 const ProductPrice = styled.div`
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 200;
   ${mobile({ marginBottom: "20px", fontSize: 10 })}
   ${tablet({ marginBottom: "20px", fontSize: 10 })}
 `;
@@ -178,6 +180,8 @@ const Hr = styled.hr`
   background-color: #eee;
   border: none;
   height: 3px;
+  ${mobile({ fontSize: 12 })}
+  ${tablet({ fontSize: 12 })}
 `;
 
 const Summary = styled.div`
@@ -200,8 +204,6 @@ const SummaryItem = styled.div`
   justify-content: space-between;
   font-weight: ${(props) => props.type === "total" && "600"};
   font-size: ${(props) => props.type === "total" && "20px"};
-  ${mobile({ fontSize: 12 })}
-  ${tablet({ fontSize: 12 })}
 `;
 
 const SummaryItemText = styled.span`
@@ -213,6 +215,8 @@ const SummaryItemText = styled.span`
 
 const SummaryItemPrice = styled.span`
   color: black;
+  ${mobile({ fontSize: "10px" })}
+  ${tablet({ fontSize: "10px" })};
 `;
 
 const Button = styled.button`
@@ -286,7 +290,7 @@ const Cart = () => {
             }}
             onClick={handleAddMore}
           >
-            <BsArrowLeftCircle style={{ Color: "gray" }} />
+            <BsArrowLeftCircle />
           </TopButton>
           <TopTexts>
             <TopText>Bag({cartQuantity})</TopText>
@@ -308,17 +312,17 @@ const Cart = () => {
               ({ title, _id, size, color, quantity, price, img }, index) => (
                 <Product key={index}>
                   <ProductDetail>
-                    <Image src={img} />
+                    <Image src={img || ""} />
                     <Details>
                       <ProductName>
-                        <b></b> {title}
+                        <b></b> {title || ""}
                       </ProductName>
                       <ProductId>
-                        <b>id:</b> {_id}
+                        <b>id:</b> {_id || ""}
                       </ProductId>
-                      <ProductColor color={color} />
+                      <ProductColor color={color || ""} />
                       <ProductSize>
-                        <b>size:</b> {size}
+                        <b>size:</b> {size || ""}
                       </ProductSize>
                     </Details>
                   </ProductDetail>
@@ -354,7 +358,7 @@ const Cart = () => {
               <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
-              name="Lama Shop"
+              name="TD Shop"
               image="https://avatars.githubusercontent.com/u/1486366?v=4"
               billingAddress
               shippingAddress

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaDev } from "react-icons/fa";
+import { MdOutlineCancel } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { resetCart } from "../../redux/cartRedux";
 import { logout } from "../../redux/userRedux";
 import {
   NavbarContainer,
@@ -30,6 +32,9 @@ function Navbarr() {
   const handleClick = () => {
     dispatch(logout());
     window.location = "/";
+  };
+  const handleClearCart = () => {
+    dispatch(resetCart());
   };
   return (
     <NavbarContainer extendNavbar={extendNavbar}>
@@ -74,6 +79,10 @@ function Navbarr() {
             />
           </Link>
           <CartQuantity>{cartQuantity}</CartQuantity>
+          <MdOutlineCancel
+            onClick={handleClearCart}
+            style={{ color: "orange", marginLeft: "10px" }}
+          />
         </RightContainer>
       </NavbarInnerContainer>
       {extendNavbar && (
