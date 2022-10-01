@@ -12,8 +12,8 @@ const Home = () => {
     <div>
       <Navbarr />
       <Promo />
-      <Slider />
       <Categories />
+      <Slider />
       <Products />
       <GetUpdates />
       <Footer />

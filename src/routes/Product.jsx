@@ -5,7 +5,7 @@ import GetUpdates from "../components/GetUpdates";
 import Promo from "../components/Promo";
 import { MdRemove } from "react-icons/md";
 import { GrFormAdd } from "react-icons/gr";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { addProduct } from "../redux/cartRedux";
@@ -19,6 +19,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   ${mobile({ padding: "10px", flexDirection: "column" })}
+  ${tablet({ padding: "10px", flexDirection: "column" })}
 `;
 
 const ImgContainer = styled.div`
@@ -31,30 +32,35 @@ const Image = styled.img`
   object-fit: cover;
   border-raduis: 10px;
   ${mobile({ height: "30vh", width: "390px", borderRadius: "10px" })};
+  ${tablet({ height: "30vh", width: "390px", borderRadius: "10px" })};
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0px 50px;
   ${mobile({ padding: "10px" })}
+  ${tablet({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
   font-weight: 400;
   color: #9a1750;
   ${mobile({ fontWeight: 400, fontSize: "20px" })}
+  ${tablet({ fontWeight: 400, fontSize: "20px" })}
 `;
 
 const Desc = styled.p`
   margin: 20px 0px;
   font-size: 16px;
   ${mobile({ fontWeight: 200, fontSize: "12px" })}
+  ${tablet({ fontWeight: 200, fontSize: "12px" })}
 `;
 
 const Price = styled.span`
   font-weight: 600;
   font-size: 20px;
   ${mobile({ fontWeight: 400, fontSize: "14px" })}
+  ${tablet({ fontWeight: 400, fontSize: "14px" })}
 `;
 
 const FilterContainer = styled.div`
@@ -63,6 +69,7 @@ const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   ${mobile({ width: "100%" })}
+  ${tablet({ width: "100%" })}
 `;
 
 const Filter = styled.div`
@@ -75,6 +82,7 @@ const FilterTitle = styled.span`
   font-weight: 600;
   color: #9a1750;
   ${mobile({ fontWeight: 400, fontSize: "14px" })}
+  ${tablet({ fontWeight: 400, fontSize: "14px" })}
 `;
 
 const FilterColor = styled.div`
@@ -106,6 +114,7 @@ const AddContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   ${mobile({ width: "100%" })}
+  ${tablet({ width: "100%" })}
 `;
 
 const AmountContainer = styled.div`
@@ -137,6 +146,7 @@ const Button = styled.button`
     color: white;
   }
   ${mobile({ fontWeight: 400, fontSize: "10px" })}
+  ${tablet({ fontWeight: 400, fontSize: "10px" })}
 `;
 
 const Product = ({ type }) => {

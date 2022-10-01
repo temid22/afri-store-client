@@ -18,6 +18,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   background-color: #ffcccb;
   ${mobile({ flexDirection: "column" })}
+  ${tablet({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -27,17 +28,19 @@ const Left = styled.div`
   padding: 20px;
   font-size: 16px;
   ${mobile({ fontSize: 10 })}
+  ${tablet({ fontSize: 10 })}
 `;
 
 const Logo = styled.h1`
-  color: maroon;
+  color: black;
 `;
 
 const Desc = styled.p`
   margin: 20px 0px;
-  color: maroon;
+  color: black;
   font-size: 16px;
   ${mobile({ fontSize: 12 })}
+  ${tablet({ fontSize: 12 })}
 `;
 
 const SocialContainer = styled.div`
@@ -68,8 +71,9 @@ const Center = styled.div`
 
 const Title = styled.h3`
   margin-bottom: 30px;
-  color: maroon;
+  color: black;
   ${mobile({ fontSize: "14px" })}
+  ${tablet({ fontSize: "14px" })}
 `;
 
 const List = styled.ul`
@@ -98,8 +102,9 @@ const LiLink = styled(Link)`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
-  color: maroon;
+  color: black;
   ${mobile({ backgroundColor: "#ffcccb", fontSize: "12px" })}
+  ${tablet({ backgroundColor: "#ffcccb", fontSize: "12px" })}
 `;
 
 const ContactItem = styled.div`

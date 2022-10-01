@@ -120,7 +120,7 @@ export const OpenLinksButton = styled.button`
   margin-bottom: 18px;
   background none;
   border: none;
-  color: #999;
+  color: pink;
   font-size: 20px;
   cursor: pointer;
   :hover {

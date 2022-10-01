@@ -4,7 +4,7 @@ import Promo from "../components/Promo";
 import Products from "../components/Products";
 import GetUpdates from "../components/GetUpdates";
 import Footer from "../components/Footer";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
 
@@ -15,6 +15,7 @@ const Title = styled.h1`
   color: maroon;
   font-size: 16px;
   ${mobile({ fontSize: 12 })}
+  ${tablet({ fontSize: 12 })}
 `;
 
 const FilterContainer = styled.div`
@@ -25,6 +26,7 @@ const FilterContainer = styled.div`
 const Filter = styled.div`
   margin: 20px;
   ${mobile({ width: "0px 15px", display: "flex", flexDirection: "column" })}
+  ${tablet({ width: "0px 15px", display: "flex", flexDirection: "column" })}
 `;
 
 const FilterText = styled.span`
@@ -33,6 +35,7 @@ const FilterText = styled.span`
   margin-right: 20px;
   color: gray;
   ${mobile({ marginRight: "0px", fontSize: 10 })}
+  ${tablet({ marginRight: "0px", fontSize: 10 })}
 `;
 
 const Select = styled.select`
@@ -42,6 +45,7 @@ const Select = styled.select`
   outline: none;
   color: gray;
   ${mobile({ margin: "10px 0px" })}
+  ${tablet({ margin: "10px 0px" })}
 `;
 const Option = styled.option`
   background-color: none;

@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import Navbarr from "../components/navbar/NavBarr";
 import { MdRemove } from "react-icons/md";
 import { GrFormAdd } from "react-icons/gr";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 import { useDispatch, useSelector } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
@@ -20,6 +20,7 @@ const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 20px;
   ${mobile({ padding: "10px" })}
+  ${tablet({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
@@ -28,6 +29,7 @@ const Title = styled.h1`
   font-size 20px;
   text-align: center;
   ${mobile({ fontSize: 12 })}
+  ${tablet({ fontSize: 12 })}
 `;
 
 const Top = styled.div`
@@ -53,10 +55,12 @@ const TopButton = styled.button`
     transition: 0.5s ease;
   }
   ${mobile({ fontSize: 8, fontWeight: 300 })}
+  ${tablet({ fontSize: 8, fontWeight: 300 })}
 `;
 
 const TopTexts = styled.div`
   ${mobile({ display: "none" })}
+  ${tablet({ display: "none" })}
 `;
 const TopText = styled.div`
   text-decoration: none;
@@ -65,24 +69,28 @@ const TopText = styled.div`
   :hover {
     color: maroon;
   }
+  ${mobile({ fontSize: 10, fontWeight: 300 })}
+  ${tablet({ fontSize: 10, fontWeight: 300 })}
 `;
 
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   ${mobile({ flexDirection: "column" })}
+  ${tablet({ flexDirection: "column" })}
 `;
 
 const Info = styled.div`
   flex: 3;
   ${mobile({ fontSize: 12 })}
+  ${tablet({ fontSize: 12 })}
 `;
 
 const Product = styled.div`
   display: flex;
-
   justify-content: space-between;
   ${mobile({ flexDirection: "column" })}
+  ${tablet({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -96,6 +104,7 @@ const Image = styled.img`
   border: none;
   border-radius: 50px;
   ${mobile({ height: "70px", width: "70px" })}
+  ${tablet({ height: "70px", width: "70px" })}
 `;
 
 const Details = styled.div`
@@ -106,18 +115,21 @@ const Details = styled.div`
   flex-direction: column;
   justify-content: space-around;
   ${mobile({ fontSize: 12 })}
+  ${tablet({ fontSize: 12 })}
 `;
 
 const ProductName = styled.span`
   font-size: 14px;
   margin: 2px;
   ${mobile({ fontSize: 12 })}
+  ${tablet({ fontSize: 12 })}
 `;
 
 const ProductId = styled.span`
   font-size: 12px;
   margin: 2px;
   ${mobile({ fontSize: 10 })}
+  ${tablet({ fontSize: 10 })}
 `;
 
 const ProductColor = styled.div`
@@ -131,6 +143,7 @@ const ProductColor = styled.div`
 const ProductSize = styled.span`
   font-size: 12px;
   ${mobile({ fontSize: 10 })}
+  ${tablet({ fontSize: 10 })}
 `;
 
 const PriceDetail = styled.div`
@@ -151,12 +164,14 @@ const ProductAmount = styled.div`
   font-size: 20px;
   margin: 5px;
   ${mobile({ margin: "5px 15px", fontSize: 12 })}
+  ${tablet({ margin: "5px 15px", fontSize: 12 })}
 `;
 
 const ProductPrice = styled.div`
   font-size: 14px;
   font-weight: 600;
   ${mobile({ marginBottom: "20px", fontSize: 10 })}
+  ${tablet({ marginBottom: "20px", fontSize: 10 })}
 `;
 
 const Hr = styled.hr`
@@ -186,12 +201,14 @@ const SummaryItem = styled.div`
   font-weight: ${(props) => props.type === "total" && "600"};
   font-size: ${(props) => props.type === "total" && "20px"};
   ${mobile({ fontSize: 12 })}
+  ${tablet({ fontSize: 12 })}
 `;
 
 const SummaryItemText = styled.span`
   color: black;
   font-size: 13px;
   ${mobile({ fontSize: 10 })}
+  ${tablet({ fontSize: 10 })}
 `;
 
 const SummaryItemPrice = styled.span`
@@ -211,6 +228,8 @@ const Button = styled.button`
     background-color: green;
     transition: 0.5s ease;
   }
+  ${mobile({ height: "30px", fontSize: "6px" })}
+  ${tablet({ height: "30px", fontSize: "6px" })};
 `;
 
 const Cart = () => {

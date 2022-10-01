@@ -70,6 +70,7 @@ const Icon = styled.div`
     transform: scale(1.1);
   }
   ${mobile({ width: "25px", height: "25px" })}
+  ${tablet({ width: "25px", height: "25px" })}
 `;
 
 const Product = ({ item }) => {

@@ -4,14 +4,17 @@ import styled from "styled-components";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import { sliderItems } from "../data";
 import { useNavigate } from "react-router-dom";
+import { mobile, tablet } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
-  height: 75vh;
+  height: 100vh;
   display: flex;
   position: relative;
   overflow: hidden;
   background-color: #e3e2df;
+  ${tablet({ height: "78vh" })};
+  ${mobile({ height: "78vh" })};
 `;
 
 const Arrow = styled.div`
